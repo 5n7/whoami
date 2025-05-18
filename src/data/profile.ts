@@ -44,6 +44,7 @@ export interface ProfileData {
     email: string;
     github: string;
     linkedin: string;
+    speakerdeck: string;
   };
 }
 
@@ -180,5 +181,6 @@ export const profileData: ProfileData = {
     email: "hi@5n7.me",
     github: "5n7",
     linkedin: "shuntak",
+    speakerdeck: "iamshunta",
   },
 };

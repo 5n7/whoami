@@ -2,12 +2,14 @@ import Link from "next/link";
 import React from "react";
 import { FaGithub, FaLinkedin } from "react-icons/fa";
 import { MdEmail } from "react-icons/md";
+import { SiSpeakerdeck } from "react-icons/si";
 
 interface ContactLinksProps {
   contacts: {
     email: string;
     github: string;
     linkedin: string;
+    speakerdeck: string;
   };
 }
 
@@ -44,6 +46,17 @@ export const ContactLinks: React.FC<ContactLinksProps> = ({ contacts }) => {
           <FaLinkedin />
         </span>
         <span>LinkedIn</span>
+      </Link>
+      <Link
+        href={`https://speakerdeck.com/${contacts.speakerdeck}`}
+        target="_blank"
+        rel="noopener noreferrer"
+        className="flex items-center space-x-2 rounded-full bg-gray-100 px-4 py-2 font-medium transition-colors hover:bg-gray-200 dark:bg-gray-800 dark:hover:bg-gray-700"
+      >
+        <span>
+          <SiSpeakerdeck />
+        </span>
+        <span>Speaker Deck</span>
       </Link>
     </section>
   );

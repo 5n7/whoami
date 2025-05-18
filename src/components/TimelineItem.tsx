@@ -43,7 +43,7 @@ export const TimelineItem: React.FC<TimelineItemProps> = ({
             )}
             <p className="mt-2 pl-2 text-sm text-gray-600">{subtitle}</p>
           </div>
-          <span className="mt-1 text-xs text-gray-500 sm:mt-0">{period}</span>
+          <span className="mt-1 pl-2 text-xs text-gray-500 sm:mt-0">{period}</span>
         </div>
 
         {description && <div className="mt-1 pl-2 text-sm text-gray-700">{description}</div>}

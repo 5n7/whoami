@@ -18,45 +18,37 @@ export const ContactLinks: React.FC<ContactLinksProps> = ({ contacts }) => {
     <section className="flex flex-wrap justify-center gap-4">
       <Link
         href={`mailto:${contacts.email}`}
-        className="flex items-center space-x-2 rounded-full bg-gray-100 px-4 py-2 font-medium transition-colors hover:bg-gray-200 dark:bg-gray-800 dark:hover:bg-gray-700"
+        className="rounded-full bg-gray-100 p-3 text-2xl transition-colors hover:bg-gray-200 dark:bg-gray-800 dark:hover:bg-gray-700"
+        aria-label="Email"
       >
-        <span>
-          <MdEmail />
-        </span>
-        <span>Email</span>
+        <MdEmail />
       </Link>
       <Link
         href={`https://github.com/${contacts.github}`}
         target="_blank"
         rel="noopener noreferrer"
-        className="flex items-center space-x-2 rounded-full bg-gray-100 px-4 py-2 font-medium transition-colors hover:bg-gray-200 dark:bg-gray-800 dark:hover:bg-gray-700"
+        className="rounded-full bg-gray-100 p-3 text-2xl transition-colors hover:bg-gray-200 dark:bg-gray-800 dark:hover:bg-gray-700"
+        aria-label="GitHub"
       >
-        <span>
-          <FaGithub />
-        </span>
-        <span>GitHub</span>
+        <FaGithub />
       </Link>
       <Link
         href={`https://www.linkedin.com/in/${contacts.linkedin}`}
         target="_blank"
         rel="noopener noreferrer"
-        className="flex items-center space-x-2 rounded-full bg-gray-100 px-4 py-2 font-medium transition-colors hover:bg-gray-200 dark:bg-gray-800 dark:hover:bg-gray-700"
+        className="rounded-full bg-gray-100 p-3 text-2xl transition-colors hover:bg-gray-200 dark:bg-gray-800 dark:hover:bg-gray-700"
+        aria-label="LinkedIn"
       >
-        <span>
-          <FaLinkedin />
-        </span>
-        <span>LinkedIn</span>
+        <FaLinkedin />
       </Link>
       <Link
         href={`https://speakerdeck.com/${contacts.speakerdeck}`}
         target="_blank"
         rel="noopener noreferrer"
-        className="flex items-center space-x-2 rounded-full bg-gray-100 px-4 py-2 font-medium transition-colors hover:bg-gray-200 dark:bg-gray-800 dark:hover:bg-gray-700"
+        className="rounded-full bg-gray-100 p-3 text-2xl transition-colors hover:bg-gray-200 dark:bg-gray-800 dark:hover:bg-gray-700"
+        aria-label="Speaker Deck"
       >
-        <span>
-          <SiSpeakerdeck />
-        </span>
-        <span>Speaker Deck</span>
+        <SiSpeakerdeck />
       </Link>
     </section>
   );

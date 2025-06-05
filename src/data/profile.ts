@@ -147,6 +147,12 @@ export const profileData: ProfileData = {
   },
   publications: [
     {
+      title: "PCP LLM Week: How We Become AI-Native",
+      publisher: "Mercari Engineering Blog",
+      date: "June 2025",
+      link: "https://engineering.mercari.com/blog/entry/20250604-pcp-llm-week/",
+    },
+    {
       title: "事業者請求払い: 多様な決済を支える決済基盤の仕組み",
       publisher: "Mercari Engineering Blog",
       date: "December 2024",

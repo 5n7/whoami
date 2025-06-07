@@ -25,7 +25,8 @@ export interface ProfileData {
       title: string;
       event: string;
       date: string;
-      link?: string;
+      materialLink?: string;
+      eventLink?: string;
     }[];
   };
   publications: {
@@ -119,22 +120,33 @@ export const profileData: ProfileData = {
   presentations: {
     professional: [
       {
+        title: "Cursor Meetup Tokyo",
+        event: "Cursor Meetup Tokyo (6000+ attendees)",
+        date: "June 2025",
+        materialLink: "https://speakerdeck.com/iamshunta/cursor-meetup-tokyo",
+        eventLink: "https://aiau.connpass.com/event/353531/",
+      },
+      {
         title: "The Future of encoding/json",
         event: "Go Conference mini 2023 Winter IN KYOTO",
         date: "December 2023",
-        link: "https://speakerdeck.com/iamshunta/the-future-of-encoding-json",
+        materialLink: "https://speakerdeck.com/iamshunta/the-future-of-encoding-json",
+        eventLink: "https://kyotogo.connpass.com/event/285351/",
       },
       {
         title: "Recap: Automatically Instrument Your Go Source Code with Orchestrion",
         event: "mercari.go #24 - GopherCon 2023 Recap",
         date: "September 2023",
-        link: "https://speakerdeck.com/iamshunta/recap-automatically-instrument-your-go-source-code-with-orchestrion",
+        materialLink:
+          "https://speakerdeck.com/iamshunta/recap-automatically-instrument-your-go-source-code-with-orchestrion",
+        eventLink: "https://mercari.connpass.com/event/299331/",
       },
       {
         title: "Recap: The Future of JSON in Go",
         event: "Go 1.21.1 Release Party & GopherCon 2023 Recap",
         date: "September 2023",
-        link: "https://speakerdeck.com/iamshunta/recap-the-future-of-json-in-go",
+        materialLink: "https://speakerdeck.com/iamshunta/recap-the-future-of-json-in-go",
+        eventLink: "https://gocon.connpass.com/event/299108/",
       },
     ],
     academic: [

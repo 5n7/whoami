@@ -21,8 +21,8 @@ export const PublicationsSection: React.FC<PublicationsSectionProps> = ({ public
             title={pub.title}
             subtitle={pub.publisher}
             period={pub.date}
-            link={pub.link}
             isLast={index === publications.length - 1}
+            titleLink={pub.link}
           />
         ))}
       </div>

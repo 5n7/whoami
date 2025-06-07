@@ -8,7 +8,8 @@ interface SpeakingSectionProps {
       title: string;
       event: string;
       date: string;
-      link?: string;
+      materialLink?: string;
+      eventLink?: string;
     }[];
   };
 }
@@ -30,8 +31,9 @@ export const SpeakingSection: React.FC<SpeakingSectionProps> = ({ presentations 
                 title={talk.title}
                 subtitle={talk.event}
                 period={talk.date}
-                link={talk.link}
                 isLast={index === talks.length - 1}
+                titleLink={talk.materialLink}
+                subtitleLink={talk.eventLink}
               />
             ))}
           </div>

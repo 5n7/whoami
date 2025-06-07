@@ -6,7 +6,8 @@ interface TimelineItemProps {
   period: string;
   description?: string | ReactNode;
   isLast?: boolean;
-  link?: string;
+  titleLink?: string;
+  subtitleLink?: string;
 }
 
 export const TimelineItem: React.FC<TimelineItemProps> = ({
@@ -15,7 +16,8 @@ export const TimelineItem: React.FC<TimelineItemProps> = ({
   period,
   description,
   isLast = false,
-  link,
+  titleLink,
+  subtitleLink,
 }) => {
   return (
     <div className={`relative pl-6 ${!isLast ? "pb-6" : ""}`}>
@@ -29,9 +31,9 @@ export const TimelineItem: React.FC<TimelineItemProps> = ({
       <div className="ml-1">
         <div className="mb-1 flex flex-col sm:flex-row sm:items-center sm:justify-between">
           <div>
-            {link ? (
+            {titleLink ? (
               <a
-                href={link}
+                href={titleLink}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="text-base font-medium text-gray-900 hover:text-gray-700"
@@ -41,7 +43,20 @@ export const TimelineItem: React.FC<TimelineItemProps> = ({
             ) : (
               <h3 className="text-base font-medium text-gray-900">{title}</h3>
             )}
-            <p className="mt-2 pl-2 text-sm text-gray-600">{subtitle}</p>
+            <p className="mt-2 pl-2 text-sm text-gray-600">
+              {subtitleLink && typeof subtitle === "string" ? (
+                <a
+                  href={subtitleLink}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-gray-600 hover:text-gray-700"
+                >
+                  {subtitle}
+                </a>
+              ) : (
+                subtitle
+              )}
+            </p>
           </div>
           <span className="mt-1 pl-2 text-xs text-gray-500 sm:mt-0">{period}</span>
         </div>

@@ -185,6 +185,12 @@ export const profileData: ProfileData = {
   ],
   awards: [
     {
+      title: "FT Tech PR Award 2025",
+      issuer: "Shunya Kimura (CTO of Mercari, Inc.)",
+      date: "2025",
+      description: "Company-internal award for technical communication",
+    },
+    {
       title: "Best Presentation Award",
       issuer: "Art Science Forum",
       date: "2022",

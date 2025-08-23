@@ -1,6 +1,6 @@
 import Link from "next/link";
 import React from "react";
-import { FaGithub, FaLinkedin } from "react-icons/fa";
+import { FaCamera, FaGithub, FaLinkedin } from "react-icons/fa";
 import { MdEmail } from "react-icons/md";
 import { SiSpeakerdeck } from "react-icons/si";
 
@@ -49,6 +49,13 @@ export const ContactLinks: React.FC<ContactLinksProps> = ({ contacts }) => {
         aria-label="Speaker Deck"
       >
         <SiSpeakerdeck />
+      </Link>
+      <Link
+        href="/photography"
+        className="rounded-full bg-gray-100 p-3 text-2xl transition-colors hover:bg-gray-200 dark:bg-gray-800 dark:hover:bg-gray-700"
+        aria-label="Photography"
+      >
+        <FaCamera />
       </Link>
     </section>
   );

@@ -10,8 +10,10 @@ type Photo = {
 };
 
 const photos: Photo[] = [
-	{ src: "/photography/photo1.jpg", alt: "Lake Chuzenji" },
-	{ src: "/photography/photo2.jpg", alt: "Ducks" },
+	{ src: "/photography/photo1.jpg", alt: "Shodo Island" },
+	{ src: "/photography/photo2.jpg", alt: "Sakura" },
+	{ src: "/photography/photo3.jpg", alt: "Lake Chuzenji" },
+	{ src: "/photography/photo4.jpg", alt: "Ducks" },
 ];
 
 export default function PhotographyPage() {

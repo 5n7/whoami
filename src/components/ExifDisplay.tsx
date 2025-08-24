@@ -76,73 +76,70 @@ export const ExifDisplay: React.FC<ExifDisplayProps> = ({ imageSrc, isOpen }) =>
 	};
 
 	return (
-		<div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/95 via-black/80 to-transparent p-8 text-white">
+		<div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/95 via-black/80 to-transparent p-4 sm:p-6 md:p-8 text-white">
 			<div className="mx-auto max-w-7xl">
 				{/* Camera and Lens Row */}
-				<div className="mb-3 flex flex-wrap items-center gap-6 text-sm font-medium">
-					{(exifData.Make || exifData.Model) && (
-						<div className="flex items-center gap-2">
-							<FaCamera className="text-white/60" />
-							<span>
-								{exifData.Make} {exifData.Model}
-							</span>
-						</div>
-					)}
-					{exifData.LensModel && (
-						<div className="flex items-center gap-2">
-							<MdLens className="text-white/60" />
-							<span>{exifData.LensModel}</span>
-						</div>
-					)}
+				<div className="mb-2 sm:mb-3 flex flex-col sm:flex-row sm:items-center gap-2 sm:gap-6 text-xs sm:text-sm font-medium">
+					<div className="flex flex-wrap items-center gap-3 sm:gap-6">
+						{(exifData.Make || exifData.Model) && (
+							<div className="flex items-center gap-1.5 sm:gap-2">
+								<FaCamera className="text-white/60 text-sm" />
+								<span className="truncate max-w-[150px] sm:max-w-none">
+									{exifData.Make} {exifData.Model}
+								</span>
+							</div>
+						)}
+						{exifData.LensModel && (
+							<div className="hidden sm:flex items-center gap-2">
+								<MdLens className="text-white/60" />
+								<span className="truncate max-w-[200px] lg:max-w-none">{exifData.LensModel}</span>
+							</div>
+						)}
+					</div>
 					{exifData.DateTimeOriginal && (
-						<div className="ml-auto flex items-center gap-2 text-white/80">
-							<MdDateRange className="text-white/60" />
-							<span>{formatDate(new Date(exifData.DateTimeOriginal))}</span>
+						<div className="flex items-center gap-1.5 sm:gap-2 text-white/70 sm:ml-auto">
+							<MdDateRange className="text-white/60 text-sm" />
+							<span className="text-xs sm:text-sm">{formatDate(new Date(exifData.DateTimeOriginal))}</span>
 						</div>
 					)}
 				</div>
 
 				{/* Divider */}
-				<div className="mb-4 h-px bg-white/20" />
+				<div className="mb-3 sm:mb-4 h-px bg-white/20" />
 
-				{/* Shooting Settings - Single Row */}
-				<div className="flex flex-wrap items-center gap-4 font-mono">
+				{/* Shooting Settings - Responsive Grid on Mobile */}
+				<div className="grid grid-cols-2 sm:flex sm:flex-wrap items-center gap-3 sm:gap-4 font-mono">
 					{exifData.FocalLength && (
-						<>
-							<div className="flex items-baseline gap-1">
-								<span className="text-xl font-semibold">{Math.round(exifData.FocalLength)}</span>
-								<span className="text-sm text-white/60">mm</span>
-								{exifData.FocalLengthIn35mmFormat && exifData.FocalLengthIn35mmFormat !== exifData.FocalLength && (
-									<span className="text-xs text-white/40 ml-1">({Math.round(exifData.FocalLengthIn35mmFormat)}mm)</span>
-								)}
-							</div>
-							{(exifData.FNumber || exifData.ExposureTime || exifData.ISO) && <span className="text-white/20">•</span>}
-						</>
+						<div className="flex items-baseline gap-1">
+							<span className="text-base sm:text-lg md:text-xl font-semibold">{Math.round(exifData.FocalLength)}</span>
+							<span className="text-xs sm:text-sm text-white/60">mm</span>
+							{exifData.FocalLengthIn35mmFormat && exifData.FocalLengthIn35mmFormat !== exifData.FocalLength && (
+								<span className="hidden sm:inline text-xs text-white/40 ml-1">
+									({Math.round(exifData.FocalLengthIn35mmFormat)}mm)
+								</span>
+							)}
+						</div>
 					)}
 
 					{exifData.FNumber && (
-						<>
-							<div className="flex items-baseline gap-0.5">
-								<span className="text-sm text-white/60">ƒ/</span>
-								<span className="text-xl font-semibold">{exifData.FNumber}</span>
-							</div>
-							{(exifData.ExposureTime || exifData.ISO) && <span className="text-white/20">•</span>}
-						</>
+						<div className="flex items-baseline gap-0.5">
+							<span className="text-xs sm:text-sm text-white/60">ƒ/</span>
+							<span className="text-base sm:text-lg md:text-xl font-semibold">{exifData.FNumber}</span>
+						</div>
 					)}
 
 					{exifData.ExposureTime && (
-						<>
-							<div className="flex items-baseline">
-								<span className="text-xl font-semibold">{formatExposureTime(exifData.ExposureTime)}</span>
-							</div>
-							{exifData.ISO && <span className="text-white/20">•</span>}
-						</>
+						<div className="flex items-baseline">
+							<span className="text-base sm:text-lg md:text-xl font-semibold">
+								{formatExposureTime(exifData.ExposureTime)}
+							</span>
+						</div>
 					)}
 
 					{exifData.ISO && (
 						<div className="flex items-baseline gap-1">
-							<span className="text-sm text-white/60">ISO</span>
-							<span className="text-xl font-semibold">{exifData.ISO}</span>
+							<span className="text-xs sm:text-sm text-white/60">ISO</span>
+							<span className="text-base sm:text-lg md:text-xl font-semibold">{exifData.ISO}</span>
 						</div>
 					)}
 				</div>

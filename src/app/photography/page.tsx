@@ -1,6 +1,7 @@
 "use client";
 
 import Image from "next/image";
+import Link from "next/link";
 import { useState } from "react";
 import { Lightbox } from "@/components/Lightbox";
 
@@ -59,12 +60,12 @@ export default function PhotographyPage() {
 			<Lightbox isOpen={isLightboxOpen} onClose={handleClose} photo={selectedPhoto} />
 
 			<footer className="mt-12 text-center">
-				<a
+				<Link
 					className="text-blue-600 transition-colors hover:text-blue-800 dark:text-blue-400 dark:hover:text-blue-300"
 					href="/"
 				>
 					← Back to Profile
-				</a>
+				</Link>
 			</footer>
 		</div>
 	);

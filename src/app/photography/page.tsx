@@ -32,7 +32,6 @@ export default function PhotographyPage() {
 		<div className="flex flex-col items-center space-y-8 py-8">
 			<header className="space-y-4 text-center">
 				<h1 className="text-4xl font-bold">Photography</h1>
-				<p className="text-lg text-gray-600 dark:text-gray-400">My passion for capturing moments through the lens</p>
 			</header>
 
 			<div className="grid w-full max-w-7xl grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3">

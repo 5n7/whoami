@@ -1,7 +1,7 @@
 ---
 registries:
   - type: standard
-    ref: v4.391.0 # renovate: depName=aquaproj/aqua-registry
+    ref: v4.439.0 # renovate: depName=aquaproj/aqua-registry
 packages:
-  - name: biomejs/biome@@biomejs/biome@2.1.2
-  - name: pnpm/pnpm@v10.13.1
+  - name: biomejs/biome@@biomejs/biome@2.3.7
+  - name: pnpm/pnpm@v10.23.0

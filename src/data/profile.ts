@@ -120,6 +120,14 @@ export const profileData: ProfileData = {
 	presentations: {
 		professional: [
 			{
+				title: "The Journey to AI-Native: Driving Company-Wide Adoption Through Data and Practice",
+				event: "mercari Gears 2025",
+				date: "November 2025",
+				materialLink:
+					"https://speakerdeck.com/mercari/mercari-gears-2025-the-journey-to-ai-native-driving-company-wide-adoption-through-data-and-practice",
+				eventLink: "https://gears.mercari.com/en/session/grow-5",
+			},
+			{
 				title: "Cursor Meetup Tokyo",
 				event: "Cursor Meetup Tokyo (6000+ attendees)",
 				date: "June 2025",
@@ -184,6 +192,12 @@ export const profileData: ProfileData = {
 		},
 	],
 	awards: [
+		{
+			title: "First Place at Yogen Kaigi #4",
+			issuer: "Mercari, Inc.",
+			date: "2025",
+			description: "Company-internal business contest",
+		},
 		{
 			title: "FT Tech PR Award 2025",
 			issuer: "Shunya Kimura (CTO of Mercari, Inc.)",

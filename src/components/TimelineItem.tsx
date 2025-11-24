@@ -30,8 +30,8 @@ export const TimelineItem: React.FC<TimelineItemProps> = ({
 
 			{/* Content */}
 			<div className="ml-1">
-				<div className="mb-1 flex flex-col sm:flex-row sm:items-center sm:justify-between">
-					<div>
+				<div className="mb-1 flex flex-col gap-1 sm:flex-row sm:items-start sm:justify-between">
+					<div className="sm:min-w-0">
 						{titleLink ? (
 							<a
 								className="text-base font-medium text-gray-900 hover:text-gray-700"
@@ -59,7 +59,9 @@ export const TimelineItem: React.FC<TimelineItemProps> = ({
 							)}
 						</p>
 					</div>
-					<span className="mt-1 pl-2 text-xs text-gray-500 sm:mt-0">{period}</span>
+					<span className="mt-1 pl-2 text-xs text-gray-500 sm:mt-0 sm:ml-auto sm:shrink-0 sm:whitespace-nowrap sm:text-right sm:pl-4">
+						{period}
+					</span>
 				</div>
 
 				{description && <div className="mt-1 pl-2 text-sm text-gray-700">{description}</div>}
